@@ -16,6 +16,19 @@ kanna is a family of seven code generators for what every Go service repeats. Ea
 | [kanna-di](https://go-kanna.github.io/di/) | The constructor of a container struct, from the functions next to your types |
 | [kanna-fixture](https://go-kanna.github.io/fixture/) | A constructor for every struct, every field filled |
 
+## Run them together
+
+The [kanna CLI](https://github.com/go-kanna/kanna) runs the generators registered as tools in your module, using your existing `//go:generate go tool kanna-*` lines. It works out the order from what each generator reads and writes, so there is no package list to maintain.
+
+```sh
+go get -tool github.com/go-kanna/kanna@latest
+go tool kanna gen --plan  # see what will run and why
+go tool kanna gen         # generate in dependency order
+go tool kanna gen --check # check the output without writing it
+```
+
+Each generator still works on its own. The CLI coordinates the kanna generators; tools such as buf and sqlc remain separate steps.
+
 ## Sponsor
 
 kanna is free and MIT licensed. If it saves you time, you can support its development on [GitHub Sponsors](https://github.com/sponsors/mickamy).
