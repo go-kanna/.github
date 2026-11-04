@@ -1,14 +1,14 @@
 <img src="https://go-kanna.github.io/assets/logo/mark-kon-rounded.svg" width="96" height="96" alt="The kanna mark: a wood shaving, flat and then curled">
 
-# Generated Go, not magic Go
+# You write the declaration. kanna writes the Go you would have.
 
-kanna is a family of seven code generators for what every Go service repeats. Each one reads what you have already written, from struct tags to your schema, and writes the plain Go you would otherwise write by hand: no reflection, nothing hidden from review. Each is a module of its own, so use one, or all seven together.
+kanna is a family of seven code generators for what every Go service repeats. You declare what you need under the names the conventions expect, and each writes the plain Go you would otherwise write by hand: no reflection, nothing hidden from review. Where the conventions do not fit, you write that part in Go or SQL. Each is a module of its own, so use one, or all seven together.
 
 **[Site](https://go-kanna.github.io/)** · **[日本語](https://go-kanna.github.io/ja/)** · **[See them work together](https://github.com/go-kanna/showcase)**
 
 | Tool | What it writes |
 |---|---|
-| [kanna-validate](https://go-kanna.github.io/validate/) | `Validate` methods from struct tags, with Rails' error codes |
+| [kanna-validate](https://go-kanna.github.io/validate/) | `Validate` methods from struct tags, with error codes keyed by JSON names |
 | [kanna-value](https://go-kanna.github.io/value/) | Value types held to their rule, and enums to their constants |
 | [kanna-orm](https://go-kanna.github.io/orm/) | The implementation of your repository interfaces, and a chainable scope per table |
 | [kanna-mapper](https://go-kanna.github.io/mapper/) | The functions you declare between domain and wire types |
