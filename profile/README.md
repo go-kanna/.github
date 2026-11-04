@@ -22,9 +22,9 @@ The [kanna CLI](https://github.com/go-kanna/kanna) runs the generators registere
 
 ```sh
 go get -tool github.com/go-kanna/kanna@latest
-go tool kanna gen --plan  # see what will run and why
-go tool kanna gen         # generate in dependency order
-go tool kanna gen --check # check the output without writing it
+go tool kanna gen -plan  # see what will run and why
+go tool kanna gen        # generate in dependency order
+go tool kanna gen -check # check the output without writing it
 ```
 
 Each generator still works on its own. The CLI coordinates the kanna generators; tools such as buf and sqlc remain separate steps.
