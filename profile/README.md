@@ -31,13 +31,13 @@ Each generator still works on its own. The CLI coordinates the kanna generators;
 
 ## Check the code that calls them
 
-kanna-orm, kanna-value, and kanna-i18n each come with a vet, which finds what the compiler lets through in the code calling what they write: a scope a repository fails on every time, a string constant none of an enum's constants holds, and an error code that renders as its key or with a placeholder unfilled.
+kanna-value, kanna-orm, and kanna-i18n each come with a vet, which finds what the compiler lets through in the code calling what they write: a string constant none of an enum's constants holds, a scope a repository fails on every time, and an error code that renders as its key or with a placeholder unfilled. The kanna CLI runs the vet of each generator your module runs that has one:
 
 ```sh
-go tool kanna-orm vet ./...
-go tool kanna-value vet ./...
-go tool kanna-i18n vet ./...
+go tool kanna vet
 ```
+
+Each vet still runs on its own, as `go tool kanna-orm vet ./...`. The vets read the generated code as it is on disk, so run `go tool kanna gen -check` beside them in CI.
 
 ## Sponsor
 
