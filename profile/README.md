@@ -2,7 +2,7 @@
 
 # You write the declaration. kanna writes the Go you would have.
 
-kanna is a family of seven code generators for what every Go service repeats. You declare what you need under the names the conventions expect, and each writes the plain Go you would otherwise write by hand: no reflection, nothing hidden from review. Where the conventions do not fit, you write that part in Go or SQL. Each is a module of its own, so use one, or all seven together.
+kanna is a family of eight code generators for what every Go service repeats. You declare what you need under the names the conventions expect, and each writes the plain Go you would otherwise write by hand: no reflection, nothing hidden from review. Where the conventions do not fit, you write that part in Go or SQL. Each is a module of its own, so use one, or all eight together.
 
 **[Site](https://go-kanna.github.io/)** · **[日本語](https://go-kanna.github.io/ja/)** · **[See them work together](https://github.com/go-kanna/showcase)**
 
@@ -13,6 +13,7 @@ kanna is a family of seven code generators for what every Go service repeats. Yo
 | [kanna-orm](https://go-kanna.github.io/orm/) | The implementation of your repository interfaces, and a chainable scope per table |
 | [kanna-mapper](https://go-kanna.github.io/mapper/) | The functions you declare between domain and wire types |
 | [kanna-i18n](https://go-kanna.github.io/i18n/) | Typed message constructors, the translations compiled in |
+| [kanna-config](https://go-kanna.github.io/config/) | The function reading a struct of settings from flags, the environment, and files |
 | [kanna-di](https://go-kanna.github.io/di/) | The constructor of a container struct, from the functions next to your types |
 | [kanna-fixture](https://go-kanna.github.io/fixture/) | A constructor for every struct, every field filled |
 
