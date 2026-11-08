@@ -8,7 +8,7 @@ kanna is a family of eight code generators for what every Go service repeats. Yo
 
 | Tool | What it writes |
 |---|---|
-| [kanna-validate](https://go-kanna.github.io/validate/) | `Validate` methods from struct tags, with error codes keyed by JSON names |
+| [kanna-validator](https://go-kanna.github.io/validator/) | `Validate` methods from struct tags, with error codes keyed by JSON names |
 | [kanna-value](https://go-kanna.github.io/value/) | Value types held to their rule, and enums to their constants |
 | [kanna-orm](https://go-kanna.github.io/orm/) | The implementation of your repository interfaces, and a chainable scope per table |
 | [kanna-mapper](https://go-kanna.github.io/mapper/) | The functions you declare between domain and wire types |
