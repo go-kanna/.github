@@ -1,0 +1,33 @@
+name: Bug report
+description: A generator wrote the wrong code, stopped on a declaration it should take, or let a mistake through.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Generator and version
+      description: The output of `go tool kanna-<name> -version`, or of `go tool kanna -version` for the kanna CLI, and of `go version`.
+      placeholder: kanna-orm v0.0.34, go1.25.4
+    validations:
+      required: true
+  - type: textarea
+    id: declaration
+    attributes:
+      label: Declaration
+      description: The smallest declaration that shows it, with its directives and tags, and the schema or messages file it reads if it does.
+      render: go
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: What it wrote or said
+      description: The generated code, or the error or warning as printed, and the command you ran.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true

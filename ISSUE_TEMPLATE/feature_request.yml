@@ -1,0 +1,25 @@
+name: Feature request
+description: Something you would like to declare instead of writing by hand.
+labels: [enhancement]
+body:
+  - type: input
+    id: generator
+    attributes:
+      label: Generator
+      placeholder: kanna-orm
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What you write today
+      description: The code you write by hand now, and how often it comes up.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would declare
+      description: The declaration you have in mind and the code you expect it to write. Say what someone reading the declaration would need to know to tell what it writes.
+    validations:
+      required: true

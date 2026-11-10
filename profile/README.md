@@ -28,7 +28,7 @@ go tool kanna gen        # generate in dependency order
 go tool kanna gen -check # check the output without writing it
 ```
 
-Each generator still works on its own. The CLI coordinates the kanna generators; tools such as buf and sqlc remain separate steps.
+Each generator still works on its own. The CLI coordinates the kanna generators; tools used beside kanna, such as buf and protoc-gen-go for the wire types or goose for migrations, remain separate steps.
 
 ## Check the code that calls them
 
